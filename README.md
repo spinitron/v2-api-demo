@@ -14,6 +14,8 @@ See the [live demo](https://spinitron.com/v2-api-demo/) for detailed information
 
 and visit http://localhost:8000/
 
+(You can use the [ZIP archive](https://github.com/spinitron/v2-api-demo/archive/master.zip) instead of git.)
+
 ---
 
 ### License
