@@ -31,7 +31,7 @@
             <h1>Spinitron v2 API demo in PHP</h1>
 
             <p class="github">
-                <a href="https://github.com/spinitron/v2-api-demo" target="_blank">Source code</a> for this demo
+                <a href="https://github.com/spinitron/v2-api-demo">Source code</a> for this demo
                 web site is on Github
             </p>
 
@@ -39,6 +39,9 @@
                 <a href="https://spinitron.github.io/v2api/">Spinitron v2 API</a> in a web page
                 using PHP directly and with JavaScript and Ajax to update a page automatically
                 from the browser.</p>
+
+            <p class="github">View a
+                <a href="https://spinitron.com/v2-api-demo/">live demo</a></p>
 
             <p>In the yellow box, the recent spins and upcoming shows use API data.
                 When the server generates this page, it renders two PHP partial views,
@@ -76,13 +79,15 @@
 
             <p>If you have a computer with PHP, you can run this demo locally and modify it:</p>
             <ul>
-                <li>Download and upzip the <a href="https://bitbucket.org/spinitron/spinpapi-demo/downloads">zip
-                        file</a> into an empty directory (or you can clone the repo)
-                </li>
-                <li>Edit <code>app/getClient.php</code> to set your API key</li>
+                <li>Download and upzip the <a href="https://github.com/spinitron/v2-api-demo/archive/master.zip">zip
+                        file</a> (or clone the repo)</li>
+
+                <li>Create a file `api-key.txt` in the root directory containing your API key, which you can
+                    find in the admin area of Spinitron v2</li>
+
                 <li>Open a command shell and in the <code>www</code> directory start a test PHP web server:
-                    <pre><code>php -S localhost:8000</code></pre>
-                </li>
+                    <pre><code>php -S localhost:8000</code></pre></li>
+
                 <li>Go to <code>http://localhost:8000/</code> in a browser.</li>
             </ul>
 

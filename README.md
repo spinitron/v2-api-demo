@@ -1,8 +1,10 @@
 # SpinPapi demo
 
-See `www/index.php` for full instructions.
+See the [live demo](https://spinitron.com/v2-api-demo/) for detailed information.
 
-#### Quickstart on Linux, Mac, etc. with git and PHP installed
+----
+
+### Quickstart on Linux, Mac, etc. with git and PHP installed
 
     git clone https://github.com/spinitron/v2-api-demo.git
     cd v2-api-demo
@@ -12,7 +14,9 @@ See `www/index.php` for full instructions.
 
 and visit http://localhost:8000/
 
-#### License
+---
+
+### License
 
 Copyright 2018 Spinitron, LLC
 
