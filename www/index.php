@@ -16,8 +16,6 @@
     <div class="main">
 
         <div class="widget-box">
-            <h1>Today on STATION</h1>
-
             <h2>Recent spins</h2>
 
             <div id="spin-recent"><?php include(__DIR__ . '/recent.php') ?></div>
@@ -39,9 +37,6 @@
                 <a href="https://spinitron.github.io/v2api/">Spinitron v2 API</a> in a web page
                 using PHP directly and with JavaScript and Ajax to update a page automatically
                 from the browser.</p>
-
-            <p class="github">View a
-                <a href="https://spinitron.com/v2-api-demo/">live demo</a></p>
 
             <p>In the yellow box, the recent spins and upcoming shows use API data.
                 When the server generates this page, it renders two PHP partial views,
