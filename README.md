@@ -4,18 +4,13 @@ See `www/index.php` for full instructions.
 
 #### Quickstart on Linux, Mac, etc. with git and PHP installed
 
-Clone the repo
-
     git clone https://github.com/spinitron/v2-api-demo.git
-
-Edit `app/getClient.php` and set your API key, which you get from the admin area in Spinitron v2.
-
-Start a PHP web server
-
-    cd v2-api-demo/www
+    cd v2-api-demo
+    echo "Your-API-KEY" > api-key.txt
+    cd www
     php -S localhost:8000
 
-Go to [http://localhost:8000/](http://localhost:8000/) in a browser.
+and visit http://localhost:8000/
 
 #### License
 
