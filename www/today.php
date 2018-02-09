@@ -2,9 +2,7 @@
 
 include __DIR__ . '/../app/getClient.php';
 /** @var SpinitronApiClient $client */
-$result = $client->search('shows', [
-    'end' => (new DateTime())->modify("+6 hour")->format(DateTime::ISO8601),
-]);
+$result = $client->search('shows', ['end' => '+6 hour']);
 
 ?>
 
