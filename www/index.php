@@ -146,8 +146,7 @@ http://localhost:8000/today.php</code></pre>
                 <li>on initial page load, inserts the HTML fragments output by the partial views into the page using PHP
                     <code>include()</code>,
                 </li>
-                <li>initializes a JavaScript in the client's web browser that uses
-                    <a href="http://api.jquery.com/load/">jQuery's <code>load()</code></a> function to
+                <li>initializes a JavaScript in the client's web browser that to
                     replace the list of recent spins with freshly loaded output of <code>recent.php</code>
                     every five seconds.
                 </li>
