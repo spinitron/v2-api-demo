@@ -273,28 +273,28 @@ code, tt {
     background-color: #f8f8f8;
     border-radius: 3px;
     font-family: Monaco, Consolas, monospace;
-    font-size: 0.8em;
-    color: #333
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+pre code {
+    background-color: transparent;
+    border: 0;
 }
 
 pre > code {
     margin: 0;
     padding: 0;
     white-space: pre;
-    border: 0;
-    background: transparent
 }
 
 pre {
     background-color: #f8f8f8;
     border: 1px solid #ccc;
-    line-height: 1.5;
     overflow: auto;
     padding: 0.3em 0.6em;
-    border-radius: 3px
-}
-
-pre code {
-    background-color: transparent;
-    border: 0
+    border-radius: 3px;
+    font-size: 0.92rem;
+    line-height: 1.25;
 }

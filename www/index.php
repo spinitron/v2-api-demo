@@ -49,16 +49,15 @@
 
             <p>The files in this demo are organized as follows:</p>
 
-            <pre>
-    |--app/
-    |   |--getClient.php
-    |   |--SpinitronApiClient.php
-    |--cache/
-    |--www/
-        |--css/
-        |--index.php
-        |--recent.php
-        |--today.php</pre>
+            <pre>├── app
+│   ├── getClient.php
+│   └── SpinitronApiClient.php
+├── cache
+└── www
+    ├── css
+    ├── index.php
+    ├── recent.php
+    └── today.php</pre>
 
             <ul>
                 <li><code>app</code> has a simple caching client class for the
@@ -77,8 +76,9 @@
                 <li>Download and upzip the <a href="https://github.com/spinitron/v2-api-demo/archive/master.zip">zip
                         file</a> (or clone the repo)</li>
 
-                <li>Create a file `api-key.txt` in the root directory containing your API key, which you can
-                    find in the admin area of Spinitron v2</li>
+                <li>Create a file <code>api-key.txt</code> in the root directory (beside the <code>app</code> and
+                    <code>www</code> directories) containing
+                    your API key, which you can find in the admin area of Spinitron v2</li>
 
                 <li>Open a command shell and in the <code>www</code> directory start a test PHP web server:
                     <pre><code>php -S localhost:8000</code></pre></li>
@@ -155,22 +155,33 @@ http://localhost:8000/today.php</code></pre>
             <h2>Garbage collection</h2>
 
             <p><code>SpinitronApiClient</code> doesn't collect garbage, i.e. it does not delete expired cache files.
-                If all your queries use static parameters, e.g. things like <code>['spins', 3]</code>, then you don't
+                If, like this demo, all your queries use static parameters, e.g. <code>['spins', 3]</code>
+                or <code>['end', '+6 hour']</code>, then you don't
                 need garbage collection since stale cache files will not proliferate.
                 But if your queries have variable parameters, e.g. date-times, then you probably need it.</p>
 
             <p>Searching through cache files to find expired ones can take time so it's good to decouple it from
-                processing page requests, the only time <code>SpinitronApiClient</code> is used in this demo.
+                page request processing, which is the only time <code>SpinitronApiClient</code> is used in this demo.
                 So <code>SpinitronApiClient</code> collects cache files together according to their lifetimes.
                 The name of each top level directory in the cache is the expiration time in seconds of
-                the cache files it contains. This allows other programs to figure which files are expired.
-                For example, you could run a bash script like this from cron</p>
+                the cache files it contains, e.g.</p>
 
-            <pre>
-<code>d=/path/to/cache
+            <pre>/var/www/v2-api-demo/cache
+├── 30
+│   └── spins?count=3
+└── 900
+    └── shows?end=%2B6+hour</pre>
+
+            <p>This allows other programs to figure which files are expired.
+                For example, I put this in <code>/etc/cron.hourly<code> of the Debian system running this demo
+                (not that the demo actually needs it)</p>
+
+            <pre><code>#!/bin/bash
+
+d=/var/www/v2-api-demo/cache
 for f in `ls $d`; do
     let m=($f+59)/60
-    find $d/$f -type f -mmin +$m -delete
+    find "$d/$f" -type f -mmin +$m -delete
 done</code></pre>
 
             <h2>Caveat</h2>
