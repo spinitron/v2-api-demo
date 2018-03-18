@@ -38,6 +38,9 @@
                 using PHP directly and with JavaScript and Ajax to update a page automatically
                 from the browser.</p>
 
+            <p>For integration of content from Spinitron using iframe and JavaScript widgets see the
+                <a href="https://spinitron.github.io/v2-web-integration/">v2 Web Intragration Demo</a></p>
+
             <p>In the yellow box, the recent spins and upcoming shows use API data.
                 When the server generates this page, it renders two PHP partial views,
                 <code>recent.php</code> and <code>today.php</code>.
