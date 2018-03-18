@@ -176,7 +176,7 @@ http://localhost:8000/today.php</code></pre>
     └── shows?end=%2B6+hour</pre>
 
             <p>This allows other programs to figure which files are expired.
-                For example, I put this in <code>/etc/cron.hourly<code> of the Debian system running this demo
+                For example, I put this in <code>/etc/cron.hourly</code> of the Debian system running this demo
                 (not that the demo actually needs it)</p>
 
             <pre><code>#!/bin/bash
