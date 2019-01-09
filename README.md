@@ -1,4 +1,4 @@
-# SpinPapi demo
+# Spinitron API demo in PHP
 
 See the [live demo](https://spinitron.com/v2-api-demo/) for detailed information.
 

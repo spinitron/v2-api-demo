@@ -26,7 +26,7 @@
         </div>
 
         <div class="widget-docs">
-            <h1>Spinitron v2 API demo in PHP</h1>
+            <h1>Spinitron API demo in PHP</h1>
 
             <p class="github">
                 <a href="https://github.com/spinitron/v2-api-demo">Source code</a> for this demo
