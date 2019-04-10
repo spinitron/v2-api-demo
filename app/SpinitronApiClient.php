@@ -105,6 +105,10 @@ class SpinitronApiClient
             'http' => [
                 'user_agent' => 'Mozilla/5.0 Spinitron v2 API demo client',
                 'header' => 'Authorization: Bearer ' . $this->apiKey,
+                'follow_location' => 1,
+                'max_redirects' => 3,
+                'timeout' => 1,
+                'ignore_errors' => true,
             ],
         ]);
         $fullUrl = $this->apiBaseUrl . $url;
