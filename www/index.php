@@ -209,14 +209,24 @@ done</code></pre>
 
 <script>
     (function () {
-        setInterval(function () {
+        // We stop the timer after some time as this is just a demo.
+        var iterations = 50;
+        var fetch = function () {
             var request = new XMLHttpRequest();
             request.onload = function () {
                 document.querySelector('#spin-recent').innerHTML = request.responseText;
+
+                iterations -= 1;
+                if (iterations <= 0) {
+                    return;
+                }
+
+                setTimeout(fetch, 5000);
             };
             request.open('GET', 'recent.php', true);
             request.send();
-        }, 5000);
+        };
+        fetch();
     }());
 </script>
 </body>
