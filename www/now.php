@@ -2,7 +2,7 @@
 
 include __DIR__ . '/../app/getClient.php';
 /** @var SpinitronApiClient $client */
-$shows = $client->search('shows', ['count' => 5]);
+$shows = $client->search('shows', ['count' => 1]);
 
 ?>
 
